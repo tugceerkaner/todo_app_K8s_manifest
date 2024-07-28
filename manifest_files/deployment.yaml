@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: todo-app-container
-        image: tugceerkaner/todo_app:build-280
+        image: tugceerkaner/todo_app:build-286
         ports:
         - containerPort: 5000
         volumeMounts:
@@ -25,4 +25,4 @@ spec:
         persistentVolumeClaim:
           claimName: todo-app-pvc
       nodeSelector:
-        topology.kubernetes.io/zone: us-east-1a  # EBS volume zone
+        topology.kubernetes.io/zone: us-east-1a  # EBS volume'unuzun olduğu zone'u burada belirtin
