@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: todo-app-deployment
-  namespace: todo-app
 spec:
   selector:
     matchLabels:
@@ -15,7 +14,7 @@ spec:
     spec:
       containers:
       - name: todo-app-container
-        image: tugceerkaner/todo_app:build-275
+        image: tugceerkaner/todo_app:build-271
         ports:
         - containerPort: 5000
         volumeMounts:
@@ -25,3 +24,5 @@ spec:
       - name: todo-app-storage
         persistentVolumeClaim:
           claimName: todo-app-pvc
+      nodeSelector:
+        topology.kubernetes.io/zone: us-east-1a  # EBS volume'unuzun olduğu zone'u burada belirtin
