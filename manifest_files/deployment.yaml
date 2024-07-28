@@ -25,4 +25,4 @@ spec:
         persistentVolumeClaim:
           claimName: todo-app-pvc
       nodeSelector:
-        topology.kubernetes.io/zone: us-east-1a  # EBS volume'unuzun olduğu zone'u burada belirtin
+        topology.kubernetes.io/zone: us-east-1a  # EBS volume zone
