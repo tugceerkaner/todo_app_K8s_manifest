@@ -17,3 +17,10 @@ spec:
         image: tugceerkaner/todo_app:build-271
         ports:
         - containerPort: 5000
+        volumeMounts:
+        - name: todo-app-storage
+          mountPath: /app/data
+      volumes:
+      - name: todo-app-storage
+        persistentVolumeClaim:
+          claimName: todo-app-pvc
