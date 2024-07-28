@@ -13,15 +13,3 @@ spec:
   awsElasticBlockStore:
     volumeID: vol-0c8534a893d5cee0b  # EBS Volume ID
     fsType: ext4
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: todo-app-pvc
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 1Gi
-  storageClassName: manual
