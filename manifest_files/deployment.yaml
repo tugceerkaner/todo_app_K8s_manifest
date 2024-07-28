@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: todo-app-container
-        image: tugceerkaner/todo_app:build-271
+        image: tugceerkaner/todo_app:build-278
         ports:
         - containerPort: 5000
         volumeMounts:
